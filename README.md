@@ -1,122 +1,40 @@
-# Portfolio Website
+# danikasingh.github.io
 
-A responsive personal portfolio website built with HTML, CSS, and JavaScript.
+Personal portfolio of Danika Singh, Business Intelligence & Data Team Lead (Cape Town).
 
-This project is designed for simple static hosting (including GitHub Pages) and includes:
+Plain HTML, CSS and JavaScript with no build step and no dependencies, served by GitHub Pages.
 
-- Hero section with profile image and resume button
-- About, Experience, Projects, Skills, Education, and Contact sections
-- Mobile-friendly navigation with hamburger menu
-- Scroll-based section reveal animation
-- Certificate panel that loads certificate links from a JSON file
-
-## Project Structure
+## Files
 
 ```text
-.
-|-- index.html
-|-- style.css
-|-- certs.json
-|-- index-template.html
-|-- certs-template.json
-|-- certs/
-|-- images/
+index.html        page content
+style.css         all styling (colours are CSS variables at the top)
+script.js         skills chart data, tabs, count-up tiles, hero sparkles, tooltips
+images/hero.webp  hero artwork
+resume.pdf        CV linked from the "View CV" button
+certs/            certificate PDFs
 ```
 
-## Run Locally
+## Editing content
 
-Because certificates are loaded with `fetch`, run the site through a local server (not by opening the HTML file directly).
+- **Skills chart:** edit the `SKILLS` list at the top of `script.js`.
+- **Impact tiles:** change `data-to="..."` on each `.count` in `index.html`.
+- **Experience, case files and projects:** edit the matching section in `index.html`.
 
-Option 1: VS Code Live Server
+## Run locally
 
-1. Install the Live Server extension.
-2. Open the project folder in VS Code.
-3. Right-click `index.html` and choose Start Live Server.
-
-Option 2: Python simple server
+Use the Live Server extension in VS Code (right-click `index.html` and choose **Open with Live Server**), or run:
 
 ```bash
 python -m http.server 5500
 ```
 
-Then open `http://localhost:5500`.
-
-## Customize Content
-
-Edit `index.html` and replace:
-
-- Name, title, and profile image
-- About text
-- Experience entries
-- Project details and links
-- Skills categories and chips
-- Education
-- Contact details
-
-Resume button:
-
-- Place your PDF in the project root as `resume.pdf`, or
-- Update the resume link in `index.html` to your preferred file path.
-
-## Certificates
-
-Certificate links are read from `certs.json`.
-
-Example format:
-
-```json
-[
-  {
-    "name": "Data Science Certificate",
-    "file": "certs/data-science.pdf"
-  }
-]
-```
-
-Steps:
-
-1. Add certificate PDFs to the `certs/` folder.
-2. Add or update entries in `certs.json`.
-3. Keep paths relative, for example `certs/my-certificate.pdf`.
-
-## Generic Template Version
-
-If you want to reuse this layout for other people:
-
-- Use `index-template.html` for placeholder-based content
-- Use `certs-template.json` for certificate placeholders
-
-This lets you duplicate the structure quickly and swap personal details.
-
-## Deploy to GitHub Pages
-
-1. Create a public GitHub repository.
-2. Push this project to the `main` branch.
-3. In GitHub: Settings > Pages.
-4. Set Source to Deploy from a branch.
-5. Choose `main` and `/ (root)`.
-6. Save and wait 1 to 2 minutes.
-
-Your site will be available at:
-
-```text
-https://your-username.github.io/repository-name/
-```
-
-If your repository is named `your-username.github.io`, the URL is:
-
-```text
-https://your-username.github.io/
-```
-
-## Update Workflow
-
-After making changes:
+## Publish
 
 ```bash
 git add .
-git commit -m "Update portfolio content"
+git commit -m "Update portfolio"
 git push
 ```
 
-GitHub Pages will redeploy automatically.
+GitHub Pages on a free account only serves **public** repositories.

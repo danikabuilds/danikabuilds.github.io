@@ -1,197 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danika Singh | Research & Data Analyst</title>
+  <title>Danika Singh | BI &amp; Data Team Lead</title>
+  <meta name="description" content="Danika Singh, Business Intelligence and Data Team Lead in Cape Town. SQL, BigQuery, Python and data quality." />
+  <meta name="theme-color" content="#020108" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav>
-    <div class="nav-container">
-      <span class="logo">Danika Singh</span>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner">
+      <a href="#top" class="logo">danika<span>.</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#impact">impact</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#cases">case files</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <img src="images/profile.jpg" alt="Danika Singh" class="profile-photo">
-    <h1>Danika Singh</h1>
-    <p>Research / Data Analyst</p>
-    <a href="resume.pdf" class="btn btn-light">View Resume (PDF)</a>
-    <button id="certs-toggle" class="btn btn-light" style="margin-left:12px">Certificates</button>
-    <div id="certs-panel" style="display:none;max-width:760px;margin:18px auto 0;text-align:left;">
-      <div id="cert-list" style="margin-top:8px;padding-left:18px"></div>
+  <!-- HERO: image only, no text on top -->
+  <header class="hero" id="top">
+    <div class="hero-art">
+      <canvas id="sparkles" aria-hidden="true"></canvas>
+      <img src="images/hero.webp" alt="A woman's profile drawn in glowing violet and blue data points, looking upward" width="1000" height="1000" />
     </div>
   </header>
 
+  <!-- INTRO -->
+  <section class="intro">
+    <p class="eyebrow">Business Intelligence &amp; Data Team Lead · Cape Town</p>
+    <h1>Hello, I'm <span class="grad">Danika</span>.</h1>
+    <p class="lede">I turn messy data into decisions, and one-off fixes into permanent ones. I lead a small research and data team at Arealytics, where I'm still the one deepest in the SQL.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:danikasingh15@gmail.com">Say hello</a>
+      <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">View CV</a>
+    </div>
+  </section>
+
   <main>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Data Analyst with hands-on experience in SQL, Python, BigQuery, and Alteryx, supporting data modelling, transformation, and analytics workflows. Experienced in preparing reliable, analysis-ready datasets with a strong focus on data quality, automation, and practical business use cases. Proven ability to turn raw data into actionable insights while collaborating closely with commercial and operational stakeholders.
-    </p>
-  </section>
+    <!-- IMPACT DASHBOARD -->
+    <section id="impact" class="section">
+      <h2 class="label">/ impact</h2>
+      <p class="section-intro">A small dashboard of what I've delivered so far.</p>
 
-  <section id="experience">
-    <h2>Experience</h2>
+      <div class="tiles">
+        <div class="tile">
+          <div class="tile-value"><span class="count" data-to="50">0</span>%</div>
+          <div class="tile-label">ingestion time cut</div>
+        </div>
+        <div class="tile">
+          <div class="tile-value"><span class="count" data-to="30">0</span>K+</div>
+          <div class="tile-label">properties audited</div>
+        </div>
+        <div class="tile">
+          <div class="tile-value"><span class="count" data-to="40">0</span>K+</div>
+          <div class="tile-label">listings corrected</div>
+        </div>
+        <div class="tile">
+          <div class="tile-value"><span class="count" data-to="5">0</span></div>
+          <div class="tile-label">Australian states covered</div>
+        </div>
+        <div class="tile">
+          <div class="tile-value">&lt;<span class="count" data-to="1">0</span> yr</div>
+          <div class="tile-label">analyst to team lead</div>
+        </div>
+      </div>
 
-    <h3>Arealytics (Nov 2024 – Present)</h3>
-    <p class="job-title">Research / Data Analyst</p>
-    <ul>
-      <li>In-depth market research of commercial real estate using GIS tools, website scraping, and AI prompting to gather information across Sales, Leasing, Listings, and Tenancies</li>
-      <li>Analyze large, multi-source datasets using SQL (BigQuery) to support commercial and market insights</li>
-      <li>Build and maintain SQL-based datasets and metrics used for KPI reporting, pricing analysis, and incentive allocation</li>
-      <li>Support ETL processes by preparing, cleaning, and transforming data using SQL, Python, and Alteryx</li>
-      <li>Perform data validation and consistency checks to ensure the accuracy and reliability of reporting outputs</li>
-      <li>Adapt data models and reporting logic as business requirements evolve</li>
-    </ul>
+      <div class="panels">
+        <figure class="panel">
+          <figcaption>
+            <span class="panel-title">Property data ingestion time</span>
+            <span class="panel-sub">Indexed: manual process = 100</span>
+          </figcaption>
+          <div class="hbar-chart" role="img" aria-label="Ingestion time fell from 100 (manual) to 50 after automating with Google Apps Script">
+            <div class="hbar-row" data-tip="Manual scraping: 100 (baseline)">
+              <span class="hbar-name">Manual scraping</span>
+              <div class="hbar-track"><div class="hbar muted" style="--w:100%"></div></div>
+              <span class="hbar-val">100</span>
+            </div>
+            <div class="hbar-row" data-tip="Automated with Apps Script: 50 (half the time)">
+              <span class="hbar-name">Apps Script automation</span>
+              <div class="hbar-track"><div class="hbar" style="--w:50%"></div></div>
+              <span class="hbar-val">50</span>
+            </div>
+          </div>
+          <p class="panel-note">Automated most of the scraping from a web-based mapping platform with Google Apps Script.</p>
+        </figure>
 
-    <h3>Sondor Performance Foams (Apr 2024 – Nov 2024)</h3>
-    <p class="job-title">Process Monitor</p>
-    <ul>
-      <li>Conducted quality control analysis and process investigations to support continuous improvement initiatives</li>
-      <li>Performed process audits and data checks to identify inefficiencies and potential integrity issues</li>
-      <li>Supported operational reporting through structured monitoring and documentation</li>
-    </ul>
+        <figure class="panel">
+          <figcaption>
+            <span class="panel-title">Career path</span>
+            <span class="panel-sub">2022 to now</span>
+          </figcaption>
+          <ol class="timeline">
+            <li data-tip="Access World · Jan 2022 – Jan 2024">
+              <span class="tl-dot"></span>
+              <span class="tl-year">2022</span>
+              <span class="tl-role">Administrative Assistant</span>
+              <span class="tl-org">Access World</span>
+            </li>
+            <li data-tip="Sondor Performance Foams · Apr – Nov 2024">
+              <span class="tl-dot"></span>
+              <span class="tl-year">2024</span>
+              <span class="tl-role">Process Monitor</span>
+              <span class="tl-org">Sondor</span>
+            </li>
+            <li data-tip="Arealytics · from Nov 2024">
+              <span class="tl-dot"></span>
+              <span class="tl-year">Nov 2024</span>
+              <span class="tl-role">Research &amp; Data Analyst</span>
+              <span class="tl-org">Arealytics</span>
+            </li>
+            <li class="now" data-tip="Arealytics · promoted in under a year">
+              <span class="tl-dot"></span>
+              <span class="tl-year">Now</span>
+              <span class="tl-role">Research &amp; Data Team Lead</span>
+              <span class="tl-org">Arealytics</span>
+            </li>
+          </ol>
+        </figure>
+      </div>
+    </section>
 
-    <h3>Access World (Jan 2022 – Jan 2024)</h3>
-    <p class="job-title">Administrative Assistant</p>
-    <ul>
-      <li>Managed data capturing, record maintenance, and administrative data flows</li>
-      <li>Supported financial and operational reporting with accurate documentation</li>
-      <li>Developed strong attention to detail and consistency when handling structured data</li>
-    </ul>
-  </section>
+    <!-- SKILLS CHART -->
+    <section id="skills" class="section">
+      <h2 class="label">/ skills</h2>
+      <p class="section-intro">How I rate my own toolkit. Longer bar = deeper hands-on use.</p>
 
-  <section id="projects">
-    <h2>Key Projects</h2>
+      <figure class="panel skills-panel">
+        <div class="skills-scale" aria-hidden="true">
+          <span>Familiar</span><span>Proficient</span><span>Expert</span>
+        </div>
+        <div class="skills-chart" id="skills-chart" role="list"></div>
+        <details class="table-view">
+          <summary>View as table</summary>
+          <table id="skills-table"><thead><tr><th>Skill</th><th>Level</th></tr></thead><tbody></tbody></table>
+        </details>
+      </figure>
 
-    <h3>Automated Data Cleaning and Maintenance</h3>
-    <p>Automated data cleaning and maintenance using Python to improve workflow efficiency and consistency.</p>
+      <div class="also">
+        <span class="also-label">Also</span>
+        <span class="chip">AI prompting for research</span>
+        <span class="chip">AI-assisted coding &amp; debugging</span>
+        <span class="chip">GitHub Copilot onboarding</span>
+        <span class="chip">SQL code reviews</span>
+        <span class="chip">Root-cause analysis</span>
+      </div>
+    </section>
 
-    <h3>SQL Datasets for Production and Sales Insights</h3>
-    <p>Developed SQL queries and datasets to support production and sales reporting for pricing and incentive decisions.</p>
+    <!-- CASE FILES -->
+    <section id="cases" class="section">
+      <h2 class="label">/ case files</h2>
+      <p class="section-intro">Problems I traced to the source and fixed for good.</p>
 
-    <h3>Personal Portfolio Website</h3>
-    <p>Built and deployed a responsive portfolio using HTML, CSS, and JavaScript with mobile navigation and dynamic certificate loading via JSON.</p>
-    <div class="project-links">
-      <a class="project-link-btn" href="https://danikasingh.github.io" target="_blank" rel="noopener">Live Site</a>
-      <a class="project-link-btn" href="https://github.com/danikasingh/danikasingh.github.io" target="_blank" rel="noopener">GitHub Repo</a>
-    </div>
-  </section>
+      <div class="cases">
+        <article class="case">
+          <h3>The 30,000-property audit</h3>
+          <dl>
+            <dt>Problem</dt><dd>Duplicate listings across an Australian property portfolio: 5 states, ~30,000 properties, 40,000+ listings.</dd>
+            <dt>Cause</dt><dd>Ingestion errors plus inconsistent researcher input.</dd>
+            <dt>Fix</dt><dd>Led a full audit and corrected every affected record.</dd>
+            <dt>Safeguard</dt><dd>Designed system-level guardrails with stakeholders and developers so it can't recur.</dd>
+          </dl>
+          <div class="tags"><span>BigQuery</span><span>SQL</span><span>Data governance</span></div>
+        </article>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-group">
-      <span class="skill-label">Data &amp; Analytics</span>
-      <div class="chips"><span class="chip">SQL (BigQuery)</span><span class="chip">Complex queries, joins, aggregations, CTEs</span><span class="chip">Data modelling and transformation</span><span class="chip">ETL / ELT workflows</span><span class="chip">Data validation and reconciliation</span></div>
-    </div>
-    <div class="skill-group">
-      <span class="skill-label">Programming, Automation &amp; Platforms</span>
-      <div class="chips"><span class="chip">Python (Pandas)</span><span class="chip">R</span><span class="chip">Alteryx</span><span class="chip">Apache Superset</span><span class="chip">Microsoft Azure</span><span class="chip">Advanced Excel</span><span class="chip">T-SQL</span><span class="chip">MySQL</span></div>
-    </div>
-    <div class="skill-group">
-      <span class="skill-label">Visualisation &amp; Reporting</span>
-      <div class="chips"><span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">KPI design</span><span class="chip">Dashboarding</span><span class="chip">Documentation</span><span class="chip">Non-technical communication</span></div>
-    </div>
-    <div class="skill-group">
-      <span class="skill-label">Analytical &amp; Professional Skills</span>
-      <div class="chips"><span class="chip">Hypothesis testing</span><span class="chip">Regression</span><span class="chip">Descriptive statistics</span><span class="chip">Process optimisation</span><span class="chip">Problem-solving</span><span class="chip">Attention to detail</span><span class="chip">Cross-functional collaboration</span><span class="chip">Clear communication</span></div>
-    </div>
-  </section>
+        <article class="case">
+          <h3>The double-counted incentives</h3>
+          <dl>
+            <dt>Problem</dt><dd>Production numbers didn't match, and the figures fed incentive allocation.</dd>
+            <dt>Cause</dt><dd>A dimension table with duplicate entries caused a join fan-out that double-counted rows.</dd>
+            <dt>Fix</dt><dd>Corrected the join logic at the source.</dd>
+            <dt>Safeguard</dt><dd>Built a permanent, automated validation check.</dd>
+          </dl>
+          <div class="tags"><span>SQL joins</span><span>Data modelling</span><span>QA</span></div>
+        </article>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>Certificate in Data Science with Python</strong> – University of Cape Town (UCT), 2024</p>
-    <p><strong>Merebank Secondary School</strong> – 2017 - 2021</p>
-  </section>
+        <article class="case">
+          <h3>Half the ingestion time</h3>
+          <dl>
+            <dt>Problem</dt><dd>Raw property data was scraped by hand from a web-based mapping platform.</dd>
+            <dt>Cause</dt><dd>A repetitive manual process with no automation.</dd>
+            <dt>Fix</dt><dd>Automated most of it with Google Apps Script.</dd>
+            <dt>Result</dt><dd>Ingestion time cut in half.</dd>
+          </dl>
+          <div class="tags"><span>Apps Script</span><span>Automation</span></div>
+        </article>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:danikasingh15@gmail.com">danikasingh15@gmail.com</a></p>
-    <p>Phone: 061 478 4555</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/danika-singh-691756230" target="_blank" rel="noopener">linkedin.com/in/danika-singh-691756230</a></p>
-    <p>Website: <a href="https://danikasingh.github.io" target="_blank" rel="noopener">danikasingh.github.io</a></p>
-    <p>Location: Cape Town, South Africa</p>
-    <p><strong>References available upon request</strong></p>
-  </section>
+        <article class="case">
+          <h3>Teaching the team to check the AI</h3>
+          <dl>
+            <dt>Problem</dt><dd>Lease documents can run past 100 pages and were read manually.</dd>
+            <dt>Fix</dt><dd>Introduced GitHub Copilot to the team for extraction.</dd>
+            <dt>Safeguard</dt><dd>Trained colleagues to validate AI-extracted information, not just trust it.</dd>
+          </dl>
+          <div class="tags"><span>AI tools</span><span>Team training</span></div>
+        </article>
+      </div>
+    </section>
 
-</main>
+    <!-- EXPERIENCE TABS -->
+    <section id="experience" class="section">
+      <h2 class="label">/ experience</h2>
 
-  <script>
-  (function(){
-    const toggle = document.getElementById('certs-toggle');
-    const panel = document.getElementById('certs-panel');
-    const list = document.getElementById('cert-list');
+      <div class="tabs">
+        <div class="tab-list" role="tablist" aria-label="Employers">
+          <button role="tab" id="tab-are" aria-selected="true" aria-controls="panel-are">Arealytics</button>
+          <button role="tab" id="tab-son" aria-selected="false" aria-controls="panel-son" tabindex="-1">Sondor</button>
+          <button role="tab" id="tab-acc" aria-selected="false" aria-controls="panel-acc" tabindex="-1">Access World</button>
+        </div>
 
-    toggle && toggle.addEventListener('click', ()=>{
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
-      if(panel.style.display === 'block') loadCerts();
-    });
+        <div class="tab-panel" role="tabpanel" id="panel-are" aria-labelledby="tab-are">
+          <h3>Research &amp; Data Team Lead <span>@ Arealytics</span></h3>
+          <p class="dates">NOV 2024 – PRESENT · previously Research &amp; Data Analyst</p>
+          <ul>
+            <li>Set the technical and quality bar for a small team of analysts, reviewing datasets, SQL logic and reporting outputs before they reach stakeholders.</li>
+            <li>Stay the team's most hands-on BigQuery and Python contributor.</li>
+            <li>Build and maintain SQL datasets and metrics for KPI reporting, pricing analysis and incentive allocation.</li>
+            <li>Coordinate research and reporting cycles, including commercial real estate market research with GIS tools and AI prompting.</li>
+          </ul>
+        </div>
 
-    async function loadCerts(){
-      list.innerHTML = '<div style="color:var(--muted)">Loading…</div>';
-      try{
-        const res = await fetch('certs.json',{cache:'no-store'});
-        if(!res.ok) throw new Error('No certs.json');
-        const items = await res.json();
-        if(!items.length){ list.innerHTML = '<div style="color:var(--muted)">No certificates listed.</div>'; return; }
-        list.innerHTML = '';
-        items.forEach(it=>{
-          const a = document.createElement('a');
-          a.href = it.file;
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.textContent = it.name || it.file;
-          a.style.cssText = 'display:block;margin:6px 0;color:#fff;font-weight:600;';
-          list.appendChild(a);
-        });
-      }catch(e){
-        list.innerHTML = '<div style="color:var(--muted)">Could not load certificates. Make sure you are viewing the site via a local server (e.g. Live Server in VS Code), not directly as a file.</div>';
-      }
-    }
-  })();
+        <div class="tab-panel" role="tabpanel" id="panel-son" aria-labelledby="tab-son" hidden>
+          <h3>Process Monitor <span>@ Sondor Performance Foams</span></h3>
+          <p class="dates">APR 2024 – NOV 2024</p>
+          <ul>
+            <li>Ran quality-control analysis and process investigations to find inefficiencies and support continuous improvement.</li>
+            <li>Performed process audits and data checks.</li>
+            <li>Supported operational reporting through structured monitoring and documentation.</li>
+          </ul>
+        </div>
 
-  // Mobile nav toggle
-  (function(){
-    const hamburger = document.getElementById('nav-hamburger');
-    const navLinks = document.getElementById('nav-links');
-    hamburger && hamburger.addEventListener('click', function(){
-      const open = navLinks.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      hamburger.setAttribute('aria-expanded', open);
-    });
-    // Close menu when a nav link is clicked
-    navLinks && navLinks.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click', function(){
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
+        <div class="tab-panel" role="tabpanel" id="panel-acc" aria-labelledby="tab-acc" hidden>
+          <h3>Administrative Assistant <span>@ Access World</span></h3>
+          <p class="dates">JAN 2022 – JAN 2024</p>
+          <ul>
+            <li>Managed data capturing, record maintenance, and administrative and financial reporting flows.</li>
+            <li>Built a strong foundation in accuracy and data discipline.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  // Section reveal on scroll
-  const _io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); _io.unobserve(e.target); } });
-  }, {threshold: 0.08});
-  document.querySelectorAll('section').forEach(s => _io.observe(s));
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="label">/ projects</h2>
+      <p class="section-intro">Things I've built. More coming soon.</p>
 
-  </script>
+      <div class="projects">
+        <article class="project">
+          <h3>Automated data cleaning</h3>
+          <p>Python scripts that clean and maintain recurring datasets, so reporting starts from consistent, analysis-ready data.</p>
+          <p class="stack">Python · Pandas</p>
+        </article>
+        <article class="project">
+          <h3>Production &amp; sales datasets</h3>
+          <p>SQL queries and datasets behind production and sales dashboards used for pricing and incentive decisions.</p>
+          <p class="stack">SQL · BigQuery · Power BI</p>
+        </article>
+        <article class="project">
+          <h3>This portfolio</h3>
+          <p>Hand-built, dependency-free site with CSS charts, an animated hero and accessible tabs.</p>
+          <p class="stack">HTML · CSS · JavaScript</p>
+          <a class="project-link" href="https://github.com/danikasingh/danikasingh.github.io" target="_blank" rel="noopener">GitHub repo →</a>
+        </article>
+      </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="label">/ contact</h2>
+      <h3 class="contact-head">Let's talk data.</h3>
+      <p>I'm open to conversations about BI and data analyst roles. The quickest way to reach me is by email.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:danikasingh15@gmail.com">danikasingh15@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/danika-singh-691756230" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="edu">Certificate in Data Science with Python, University of Cape Town (2024) · <a href="certs/data-science.pdf" target="_blank" rel="noopener">view certificate</a></p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Designed and built by Danika Singh · Cape Town</p>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
