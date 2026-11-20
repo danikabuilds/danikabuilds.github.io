@@ -1,6 +1,6 @@
 # danikasingh.github.io
 
-Personal portfolio of Danika Singh, Business Intelligence & Data Team Lead (Cape Town).
+Personal portfolio of Danika Singh, Business Intelligence & Data Analyst (Cape Town).
 
 Plain HTML, CSS and JavaScript with no build step and no dependencies, served by GitHub Pages.
 
