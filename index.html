@@ -21,10 +21,10 @@
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#impact">impact</a></li>
-        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
         <li><a href="#cases">case files</a></li>
         <li><a href="#experience">experience</a></li>
-        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </div>
@@ -135,29 +135,52 @@
       </div>
     </section>
 
-    <!-- SKILLS CHART -->
-    <section id="skills" class="section">
-      <h2 class="label">/ skills</h2>
-      <p class="section-intro">How I rate my own toolkit. Longer bar = deeper hands-on use.</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="label">/ projects</h2>
+      <p class="section-intro">Things I've built. More coming soon.</p>
 
-      <figure class="panel skills-panel">
-        <div class="skills-scale" aria-hidden="true">
-          <span>Familiar</span><span>Proficient</span><span>Expert</span>
-        </div>
-        <div class="skills-chart" id="skills-chart" role="list"></div>
-        <details class="table-view">
-          <summary>View as table</summary>
-          <table id="skills-table"><thead><tr><th>Skill</th><th>Level</th></tr></thead><tbody></tbody></table>
-        </details>
-      </figure>
-
-      <div class="also">
-        <span class="also-label">Also</span>
-        <span class="chip">AI prompting for research</span>
-        <span class="chip">AI-assisted coding &amp; debugging</span>
-        <span class="chip">GitHub Copilot onboarding</span>
-        <span class="chip">SQL code reviews</span>
-        <span class="chip">Root-cause analysis</span>
+      <div class="projects">
+        <article class="project featured">
+          <a class="featured-shot" href="https://thejoinery.dev/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="images/the-joinery.webp" width="1200" height="675" loading="lazy" alt="">
+          </a>
+          <div class="featured-body">
+            <p class="featured-tag">Featured</p>
+            <h3>The Joinery</h3>
+            <p>A free place to practise data skills in the browser, from a first SQL query to a tested pipeline. I built it while preparing for my own interviews.</p>
+            <ul class="feature-tags" aria-label="What it does">
+              <li>Real SQL in the browser</li>
+              <li>Query translator</li>
+              <li>Levelled quizzes</li>
+              <li>End-to-end projects</li>
+            </ul>
+            <dl class="stack-groups">
+              <div><dt>Site</dt><dd class="stack">HTML · CSS · JavaScript · SQLite (WebAssembly) · CodeMirror · Canvas</dd></div>
+              <div><dt>Projects</dt><dd class="stack">Python · pandas · DuckDB · dbt · GitHub Actions · Matplotlib</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="project-link" href="https://thejoinery.dev/" target="_blank" rel="noopener">Visit the site →</a>
+              <a class="project-link" href="https://github.com/danikabuilds/the-joinery" target="_blank" rel="noopener">GitHub repo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="project">
+          <h3>Automated data cleaning</h3>
+          <p>Python scripts that clean and maintain recurring datasets, so reporting starts from consistent, analysis-ready data.</p>
+          <p class="stack">Python · Pandas</p>
+        </article>
+        <article class="project">
+          <h3>Production &amp; sales datasets</h3>
+          <p>SQL queries and datasets behind production and sales dashboards used for pricing and incentive decisions.</p>
+          <p class="stack">SQL · BigQuery · Power BI</p>
+        </article>
+        <article class="project">
+          <h3>This portfolio</h3>
+          <p>Hand-built, dependency-free site with CSS charts, an animated hero and accessible tabs.</p>
+          <p class="stack">HTML · CSS · JavaScript</p>
+          <a class="project-link" href="https://github.com/danikabuilds/danikabuilds.github.io" target="_blank" rel="noopener">GitHub repo →</a>
+        </article>
       </div>
     </section>
 
@@ -255,53 +278,16 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2 class="label">/ projects</h2>
-      <p class="section-intro">Things I've built. More coming soon.</p>
-
-      <div class="projects">
-        <article class="project featured">
-          <a class="featured-shot" href="https://danikabuilds.github.io/the-joinery/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="images/the-joinery.webp" width="1200" height="675" loading="lazy" alt="">
-          </a>
-          <div class="featured-body">
-            <p class="featured-tag">Featured</p>
-            <h3>The Joinery</h3>
-            <p>A free place to practise data skills in the browser, from a first SQL query to a tested pipeline. I built it while preparing for my own interviews.</p>
-            <ul class="feature-tags" aria-label="What it does">
-              <li>Real SQL in the browser</li>
-              <li>Query translator</li>
-              <li>Levelled quizzes</li>
-              <li>End-to-end projects</li>
-            </ul>
-            <dl class="stack-groups">
-              <div><dt>Site</dt><dd class="stack">HTML · CSS · JavaScript · SQLite (WebAssembly) · CodeMirror · Canvas</dd></div>
-              <div><dt>Projects</dt><dd class="stack">Python · pandas · DuckDB · dbt · GitHub Actions · Matplotlib</dd></div>
-            </dl>
-            <div class="project-links">
-              <a class="project-link" href="https://danikabuilds.github.io/the-joinery/" target="_blank" rel="noopener">Visit the site →</a>
-              <a class="project-link" href="https://github.com/danikabuilds/the-joinery" target="_blank" rel="noopener">GitHub repo →</a>
-            </div>
-          </div>
-        </article>
-        <article class="project">
-          <h3>Automated data cleaning</h3>
-          <p>Python scripts that clean and maintain recurring datasets, so reporting starts from consistent, analysis-ready data.</p>
-          <p class="stack">Python · Pandas</p>
-        </article>
-        <article class="project">
-          <h3>Production &amp; sales datasets</h3>
-          <p>SQL queries and datasets behind production and sales dashboards used for pricing and incentive decisions.</p>
-          <p class="stack">SQL · BigQuery · Power BI</p>
-        </article>
-        <article class="project">
-          <h3>This portfolio</h3>
-          <p>Hand-built, dependency-free site with CSS charts, an animated hero and accessible tabs.</p>
-          <p class="stack">HTML · CSS · JavaScript</p>
-          <a class="project-link" href="https://github.com/danikabuilds/danikabuilds.github.io" target="_blank" rel="noopener">GitHub repo →</a>
-        </article>
-      </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="label">/ skills</h2>
+      <p class="section-intro">The tools I use, by how deeply I've used them.</p>
+      <dl class="panel skill-levels" id="skills-chart">
+        <div class="skill-row skill-also">
+          <dt>Also</dt>
+          <dd>AI prompting for research · AI-assisted coding &amp; debugging · GitHub Copilot onboarding · SQL code reviews · Root-cause analysis</dd>
+        </div>
+      </dl>
     </section>
 
     <!-- CONTACT -->

@@ -5,36 +5,30 @@ const SKILLS = [
   { level: "Proficient", items: ["Python (Pandas)", "Power BI", "Tableau", "KPI design & reporting", "Data modelling", "ETL / ELT"] },
   { level: "Familiar",   items: ["Alteryx", "Apache Superset", "T-SQL", "MySQL", "R", "Advanced Excel", "Git", "Azure (exposure)"] },
 ];
-const LEVEL_WIDTH = { Expert: "100%", Proficient: "66.6%", Familiar: "33.3%" };
+const LEVEL_DOTS = { Expert: 3, Proficient: 2, Familiar: 1 };
 
+// One quiet row per level: a small three-dot marker, the level, then the skills as plain text.
 (function buildSkills() {
-  const chart = document.getElementById("skills-chart");
-  const tbody = document.querySelector("#skills-table tbody");
-  if (!chart) return;
+  const list = document.getElementById("skills-chart");
+  if (!list) return;
+  const also = list.querySelector(".skill-also");
   SKILLS.forEach(group => {
-    const head = document.createElement("div");
-    head.className = "skill-group-head";
-    head.textContent = group.level;
-    chart.appendChild(head);
-    group.items.forEach(name => {
-      const row = document.createElement("div");
-      row.className = "hbar-row";
-      row.setAttribute("role", "listitem");
-      row.dataset.tip = `${name}: ${group.level}`;
-      row.innerHTML =
-        `<span class="hbar-name"></span>` +
-        `<div class="hbar-track"><div class="hbar" style="--w:${LEVEL_WIDTH[group.level]}"></div></div>` +
-        `<span class="hbar-val"></span>`;
-      row.querySelector(".hbar-name").textContent = name;
-      row.setAttribute("aria-label", `${name}, ${group.level}`);
-      chart.appendChild(row);
-
-      const tr = document.createElement("tr");
-      tr.innerHTML = "<td></td><td></td>";
-      tr.children[0].textContent = name;
-      tr.children[1].textContent = group.level;
-      tbody.appendChild(tr);
-    });
+    const row = document.createElement("div");
+    row.className = "skill-row";
+    const dt = document.createElement("dt");
+    const dots = document.createElement("span");
+    dots.className = "skill-dots";
+    dots.setAttribute("aria-hidden", "true");
+    for (let i = 1; i <= 3; i++) {
+      const d = document.createElement("i");
+      if (i <= LEVEL_DOTS[group.level]) d.className = "on";
+      dots.appendChild(d);
+    }
+    dt.append(dots, group.level);
+    const dd = document.createElement("dd");
+    dd.textContent = group.items.join(" · ");
+    row.append(dt, dd);
+    list.insertBefore(row, also);
   });
 })();
 
